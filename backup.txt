@@ -1,0 +1,899 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #3968b5;
+  color: white;
+}
+
+.navbar {
+  background-color: #055265;
+  padding: 50px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0px;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(77, 196, 153);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  background:  linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('spark.jpeg') center/cover;;
+  text-align: center;
+  padding: 100px 20px;
+  color: rgb(74, 120, 167);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero .btn {
+  padding: 5px 10px;
+  background:#055265;
+  color: rgb(98, 129, 170);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #48c1da;
+}
+
+.feature {
+  flex: 1 1 250px;
+  max-width: 300px;
+  background: #4f70d6;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+footer {
+  background:#055265;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+.page-header {
+    background: #ffe4e1;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .page-header h1 {
+    font-size: 2.5rem;
+    color: #f46c6c;
+    margin-bottom: 10px;
+  }
+  
+  .about-content .container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .about-content h2 {
+    color: #f46c6c;
+    margin-top: 30px;
+  }
+  
+  .about-content p {
+    line-height: 1.6;
+    margin-top: 10px;
+  }
+  .breeds-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .breed-card {
+    background: #fff8f6;
+    border: 1px solid #ffe0db;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  
+  .breed-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .breed-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .breed-card h3 {
+    color: #f46c6c;
+    margin-top: 15px;
+  }
+  
+  .breed-card p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .gallery-grid img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .gallery-grid img:hover {
+    transform: scale(1.05);
+  }
+  .adoption-info {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px;
+  }
+  
+  .adoption-info h2, .adoption-form h3 {
+    color: #444;
+    margin-bottom: 20px;
+  }
+  
+  .adoption-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  
+  .adoption-form input,
+  .adoption-form textarea {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: vertical;
+  }
+  
+  .adoption-form textarea {
+    min-height: 120px;
+  }
+  
+  .adoption-form button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .adoption-form button:hover {
+    background-color: #e0554b;
+  }
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 900px;
+    margin: auto;
+    padding: 40px;
+  }
+  
+  .contact-info {
+    background: #fefefe;
+    border-left: 5px solid #ff6f61;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .contact-form textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  .contact-form button {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #e0554b;
+  }
+  .delivery-section {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+    background: #fff9f8;
+    border-radius: 12px;
+  }
+  
+  .delivery-info h2 {
+    margin-top: 30px;
+    color: #ff6f61;
+  }
+  
+  .delivery-info ul {
+    margin-left: 20px;
+    list-style-type: disc;
+    padding-left: 10px;
+  }
+  .swiper {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+  }
+  .swiper-slide img {
+    width: 100%;
+    border-radius: 12px;
+  }
+  .adoption-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 600px;
+    margin: auto;
+  }
+  .adoption-form input,
+  .adoption-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  .adoption-form button {
+    padding: 12px;
+    background: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .newsletter-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #576281;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    z-index: 999;
+  }
+  .popup-content h2 {
+    margin: 0 0 10px;
+  }
+  .popup-content input {
+    padding: 10px;
+    width: 70%;
+    margin-right: 5px;
+  }
+  .popup-content button {
+    padding: 10px;
+    background: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 6px;
+  }
+  .close-popup {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+/* Default Light Theme */
+body {
+  background: #fff;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dark-mode {
+  background: #1e1e1e;
+  color: #eee;
+}
+
+.dark-mode header,
+.dark-mode nav,
+.dark-mode footer,
+.dark-mode section {
+  background-color: #2a2a2a;
+}
+
+.dark-toggle {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  padding: 8px 12px;
+  background: #2ea9b6;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.dark-mode .dark-toggle {
+  background: #444;
+  color: #fff;
+}
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+               
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Puppy Paradise</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">🐾 Puppy Paradise</div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="breeds.html">Breeds</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="adoption.html">Adoption</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="delivary.html">Delivery</a></li>
+      </ul>
+    </nav>
+    <button id="darkModeToggle" class="dark-toggle">🌙 Dark Mode</button>
+
+  </header>
+  <div class="newsletter-popup" id="newsletter">
+    <div class="popup-content">
+      <h2>Join Our Puppy Pack!</h2>
+      <p>Get the latest puppy news and tips in your inbox.</p>
+      <form action="https://formspree.io/f/yournewsletterformid" method="POST">
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <span class="close-popup" onclick="document.getElementById('newsletter').style.display='none'">&times;</span>
+    </div>
+  </div>
+  
+  <section class="hero">
+    <h1>Welcome to Puppy Paradise</h1>
+    <p>Your forever friend is waiting!</p> 
+    
+    <a href="adoption.html" class="btn">Adopt Now</a>
+  </section>
+  <script>
+    const toggle = document.getElementById('darkModeToggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+  
+      // Save preference to localStorage
+      const isDark = document.body.classList.contains('dark-mode');
+      localStorage.setItem('darkMode', isDark);
+    });
+  
+    // Load preference
+    window.addEventListener('DOMContentLoaded', () => {
+      if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-mode');
+      }
+    });
+  </script>
+  
+
+  <section class="features">
+    <div class="feature">
+      <h3>Healthy Puppies</h3>
+      <p>Our puppies are vet-checked, vaccinated, and well-cared for.</p>
+    </div>
+    <div class="feature">
+      <h3>Trusted Breeds</h3>
+      <p>We offer a variety of family-friendly, pure and mixed breeds.</p>
+    </div>
+    <div class="feature">
+      <h3>Nationwide Delivery</h3>
+      <p>We deliver safe and happy puppies to your doorstep.</p>
+    </div>
+  </section>
+ 
+
+  <footer>
+    <div id="newsletterPopup" class="popup">
+      <div class="popup-content">
+        <h3>Subscribe to Our Puppy Newsletter</h3>
+        <form action="https://formspree.io/f/your-id" method="POST">
+          <input type="email" name="email" placeholder="Enter your email">
+          <button type="submit">Subscribe</button>
+        </form>
+        <button id="closePopup">✖</button>
+      </div>
+    </div>
+    
+    <div>
+      <h3>Contact Us</h3>
+      <p>Email: geywoodacresstableinfo@gmail.com| Phone: (555) 123-4567</p>
+    </div>
+    <div>
+      <h3>Follow Us</h3>
+      <div class="flex">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+      </div>
+    </div>
+    <p>&copy; 2025 Puppy Paradise. All rights reserved.</p>
+  </footer>
+  <!-- Tawk.to Live Chat -->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/YOUR_SITE_ID/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  
+</body>
+</html>
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Breeds - Puppy Paradise</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<button id="darkModeToggle" class="dark-toggle">🌙 Dark Mode</button>
+<body>
+  
+  <header class="navbar">
+    <div class="logo">🐾 Puppy Paradise</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="breeds.html" class="active">Breeds</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="adoption.html">Adoption</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="delivary.html">Delivery</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-header">
+    <h1>Available Breeds</h1>
+    <p>Find the perfect puppy breed that suits your lifestyle and family.</p>
+  </section>
+
+  <section class="breeds-list">
+    <div class="breed-card">
+      <img src="images/labrador.jpg" alt="Labrador Retriever" />
+      <h3>Labrador Retriever</h3>
+      <p>Friendly, outgoing, and high-spirited. Great for families and active homes.</p>
+    </div>
+
+    <div class="breed-card">
+      <img src="images/poodle.jpg" alt="Poodle" />
+      <h3>Poodle</h3>
+      <p>Intelligent and hypoallergenic. Comes in standard, miniature, and toy sizes.</p>
+    </div>
+
+    <div class="breed-card">
+      <img src="images/bulldog.jpg" alt="Bulldog" />
+      <h3>Bulldog</h3>
+      <p>Calm and courageous with a lovable personality and a wrinkly face.</p>
+    </div>
+
+    <div class="breed-card">
+      <img src="images/beagle.jpg" alt="Beagle" />
+      <h3>Beagle</h3>
+      <p>Inquisitive and friendly. A small hound with a big heart.</p>
+    </div>
+
+    <!-- Add more breeds as needed -->
+  </section>
+  <script>
+    const toggle = document.getElementById('darkModeToggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+  
+      // Save preference to localStorage
+      const isDark = document.body.classList.contains('dark-mode');
+      localStorage.setItem('darkMode', isDark);
+    });
+  
+    // Load preference
+    window.addEventListener('DOMContentLoaded', () => {
+      if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-mode');
+      }
+    });
+  </script>
+  <script>
+    window.onload = function () {
+      setTimeout(() => {
+        document.getElementById('newsletterPopup').style.display = 'flex';
+      }, 3000);
+      document.getElementById('closePopup').onclick = () => {
+        document.getElementById('newsletterPopup').style.display = 'none';
+      };
+    };
+  </script>
+  
+
+  <footer>
+    <div id="newsletterPopup" class="popup">
+      <div class="popup-content">
+        <h3>Subscribe to Our Puppy Newsletter</h3>
+        <form action="https://formspree.io/f/your-id" method="POST">
+          <input type="email" name="email" placeholder="Enter your email">
+          <button type="submit">Subscribe</button>
+        </form>
+        <button id="closePopup">✖</button>
+      </div>
+    </div>
+    
+    <p>&copy; 2025 Puppy Paradise. All rights reserved.</p>
+
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delivery - Puppy Paradise</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">🐾 Puppy Paradise</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="breeds.html">Breeds</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="adoption.html">Adoption</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="delivary.html" class="active">Delivery</a></li>
+      </ul>
+    </nav>
+    <button id="darkModeToggle" class="dark-toggle">🌙 Dark Mode</button>
+  </header>
+
+  <section class="page-header">
+    <h1>Puppy Delivery</h1>
+    <p>Safe, stress-free delivery to your doorstep.</p>
+  </section>
+
+  <section class="delivery-section">
+    <div class="delivery-info">
+      <h2>How It Works</h2>
+      <p>Once your adoption is approved, we’ll work with you to schedule a delivery date that’s convenient for you. Our delivery partners are trained to handle puppies with care to ensure a safe and happy journey.</p>
+
+      <h2>Delivery Coverage</h2>
+      <p>We deliver within the continental United States. For international inquiries, please contact us directly to discuss options.</p>
+
+      <h2>What’s Included</h2>
+      <ul>
+        <li>Comfortable travel crate</li>
+        <li>Food and water for the trip</li>
+        <li>Health documents and care instructions</li>
+        <li>Welcome pack with toys and treats</li>
+      </ul>
+
+      <h2>Questions?</h2>
+      <p>Feel free to <a href="contact.html">contact us</a> if you have any questions about the delivery process.</p>
+    </div>
+  </section>
+  <script>
+    const toggle = document.getElementById('darkModeToggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+  
+      // Save preference to localStorage
+      const isDark = document.body.classList.contains('dark-mode');
+      localStorage.setItem('darkMode', isDark);
+    });
+  
+    // Load preference
+    window.addEventListener('DOMContentLoaded', () => {
+      if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-mode');
+      }
+    });
+  </script>
+  <script>
+    window.onload = function () {
+      setTimeout(() => {
+        document.getElementById('newsletterPopup').style.display = 'flex';
+      }, 3000);
+      document.getElementById('closePopup').onclick = () => {
+        document.getElementById('newsletterPopup').style.display = 'none';
+      };
+    };
+  </script>
+  
+  <footer>
+    <div id="newsletterPopup" class="popup">
+      <div class="popup-content">
+        <h3>Subscribe to Our Puppy Newsletter</h3>
+        <form action="https://formspree.io/f/your-id" method="POST">
+          <input type="email" name="email" placeholder="Enter your email">
+          <button type="submit">Subscribe</button>
+        </form>
+        <button id="closePopup">✖</button>
+      </div>
+    </div>
+    
+    <p>&copy; 2025 Puppy Paradise. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Puppy Paradise</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">🐾 Puppy Paradise</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="breeds.html">Breeds</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="adoption.html">Adoption</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="delivary.html">Delivery</a></li>
+      </ul>
+    </nav>
+    <button id="darkModeToggle" class="dark-toggle">🌙 Dark Mode</button>
+  </header>
+
+  <section class="page-header">
+    <h1>Contact Us</h1>
+    <p>We’re here to help! Get in touch with us anytime.</p>
+  </section>
+
+  <section class="contact-container">
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p><strong>Email:</strong> info@puppyparadise.com</p>
+      <p><strong>Phone:</strong> +1 (800) 555-1234</p>
+      <p><strong>Location:</strong> 123 Puppy Lane, Petville, USA</p>
+    </div>
+
+    <form class="contact-form" action="#" method="post">
+      <h3>Send a Message</h3>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+  <script>
+    const toggle = document.getElementById('darkModeToggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+  
+      // Save preference to localStorage
+      const isDark = document.body.classList.contains('dark-mode');
+      localStorage.setItem('darkMode', isDark);
+    });
+  
+    // Load preference
+    window.addEventListener('DOMContentLoaded', () => {
+      if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-mode');
+      }
+    });
+  </script>
+  <script>
+    window.onload = function () {
+      setTimeout(() => {
+        document.getElementById('newsletterPopup').style.display = 'flex';
+      }, 3000);
+      document.getElementById('closePopup').onclick = () => {
+        document.getElementById('newsletterPopup').style.display = 'none';
+      };
+    };
+  </script>
+  
+  <footer>
+    <div id="newsletterPopup" class="popup">
+      <div class="popup-content">
+        <h3>Subscribe to Our Puppy Newsletter</h3>
+        <form action="https://formspree.io/f/your-id" method="POST">
+          <input type="email" name="email" placeholder="Enter your email">
+          <button type="submit">Subscribe</button>
+        </form>
+        <button id="closePopup">✖</button>
+      </div>
+    </div>
+    
+    <p>&copy; 2025 Puppy Paradise. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Puppy Paradise</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">🐾 Puppy Paradise</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="breeds.html">Breeds</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="adoption.html">Adoption</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="delivery.html">Delivery</a></li>
+      </ul>
+    </nav>
+    <button id="darkModeToggle" class="dark-toggle">🌙 Dark Mode</button>
+  </header>
+
+  <section class="page-header" style="padding: 40px 20px; text-align:center; background: #f4f9fc; color: #055265;">
+    <h1>Contact Us</h1>
+    <p>We’re here to help! Get in touch with us anytime.</p>
+  </section>
+
+  <section class="contact-container" style="display: flex; flex-wrap: wrap; gap: 40px; padding: 40px 20px; max-width: 900px; margin: 0 auto;">
+    <div class="contact-info" style="flex: 1 1 300px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+      <h2 style="color: #055265; margin-bottom: 20px;">Get in Touch</h2>
+      <p><strong>Email:</strong> info@puppyparadise.com</p>
+      <p><strong>Phone:</strong> +1 (800) 555-1234</p>
+      <p><strong>Location:</strong> 123 Puppy Lane, Petville, USA</p>
+    </div>
+
+    <form class="contact-form" action="#" method="post" style="flex: 1 1 300px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); display: flex; flex-direction: column; gap: 15px;">
+      <h3 style="color: #055265; margin-bottom: 15px;">Send a Message</h3>
+      <input type="text" name="name" placeholder="Your Name" required style="padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem;"/>
+      <input type="email" name="email" placeholder="Your Email" required style="padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem;"/>
+      <textarea name="message" placeholder="Your Message" required rows="5" style="padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem; resize: vertical;"></textarea>
+      <button type="submit" style="padding: 12px; background: #ff6f61; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; transition: background 0.3s;">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <div id="newsletterPopup" class="newsletter-popup" style="display:none; flex-direction: column; align-items: center;">
+      <div class="popup-content" style="position: relative; background: #576281; padding: 20px; border-radius: 10px; color: white; width: 320px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+        <h2 style="margin-bottom: 15px;">Subscribe to Our Puppy Newsletter</h2>
+        <form action="https://formspree.io/f/your-id" method="POST" style="display: flex; gap: 10px;">
+          <input type="email" name="email" placeholder="Enter your email" required style="padding: 10px; flex: 1; border: none; border-radius: 6px;"/>
+          <button type="submit" style="padding: 10px; background: #ff6f61; border: none; border-radius: 6px; color: white; cursor: pointer;">Subscribe</button>
+        </form>
+        <button id="closePopup" class="close-popup" style="position: absolute; top: 8px; right: 12px; background: transparent; border: none; font-size: 22px; color: white; cursor: pointer;">✖</button>
+      </div>
+    </div>
+    
+    <p style="margin-top: 20px;">&copy; 2025 Puppy Paradise. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('darkModeToggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+  
+      // Save preference to localStorage
+      const isDark = document.body.classList.contains('dark-mode');
+      localStorage.setItem('darkMode', isDark);
+    });
+  
+    // Load preference
+    window.addEventListener('DOMContentLoaded', () => {
+      if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-mode');
+      }
+    });
+
+    window.onload = function () {
+      setTimeout(() => {
+        document.getElementById('newsletterPopup').style.display = 'flex';
+      }, 3000);
+      document.getElementById('closePopup').onclick = () => {
+        document.getElementById('newsletterPopup').style.display = 'none';
+      };
+    };
+  </script>
+</body>
+</html>

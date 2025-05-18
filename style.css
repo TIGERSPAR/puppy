@@ -1,0 +1,203 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #055265;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: rgb(77, 196, 153);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #a3ffe7;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('spark.jpeg') center/cover no-repeat;
+  text-align: center;
+  padding: 120px 20px;
+  color: #f0f8ff;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  padding: 10px 20px;
+  background: #ff6f61;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.hero .btn:hover {
+  background: #e0554b;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 60px 20px;
+  background: #f4f9fc;
+}
+
+.feature {
+  flex: 1 1 250px;
+  max-width: 300px;
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+  background: #055265;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.95rem;
+}
+
+/* Newsletter Popup */
+.newsletter-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #576281;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  z-index: 999;
+  color: white;
+}
+
+.popup-content h2 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.popup-content input {
+  padding: 10px;
+  width: 70%;
+  margin-right: 5px;
+  border: none;
+  border-radius: 6px;
+}
+
+.popup-content button {
+  padding: 10px;
+  background: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.close-popup {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Swiper Section */
+.swiper {
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.swiper-slide img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background: #1e1e1e;
+  color: #eee;
+}
+
+.dark-mode .navbar,
+.dark-mode .features,
+.dark-mode footer,
+.dark-mode .newsletter-popup {
+  background-color: #2a2a2a;
+}
+
+.dark-mode .navbar ul li a {
+  color: #ccc;
+}
+
+.dark-mode .feature {
+  background: #333;
+  color: #eee;
+}
+
+.dark-toggle {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  padding: 8px 12px;
+  background: #2ea9b6;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.dark-mode .dark-toggle {
+  background: #444;
+  color: #fff;
+}

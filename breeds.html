@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Breeds - Puppy Paradise</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: #f9fbfd;
+      color: #2c3e50;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 0;
+      line-height: 1.6;
+    }
+    .navbar {
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ff6f61;
+      cursor: default;
+    }
+    .navbar nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 25px;
+    }
+    .navbar nav ul li a {
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: 600;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: color 0.3s ease;
+    }
+    .navbar nav ul li a:hover,
+    .navbar nav ul li a.active {
+      background: #ff6f61;
+      color: white;
+    }
+    .dark-toggle {
+      background: transparent;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: #ff6f61;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+    .dark-toggle:hover {
+      background: #ff6f61;
+      color: white;
+    }
+    main {
+      max-width: 1000px;
+      margin: 50px auto 70px;
+      padding: 0 20px;
+    }
+    h1 {
+      color: #ff6f61;
+      text-align: center;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .breed-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 30px;
+    }
+    .breed-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+    .breed-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+    .breed-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .breed-info {
+      padding: 20px;
+    }
+    .breed-info h3 {
+      margin: 0 0 10px;
+      color: #2c3e50;
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+    .breed-info p {
+      margin: 0;
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.4;
+    }
+    footer {
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 0.9rem;
+      color: #999;
+      background: #fafafa;
+      margin-top: 60px;
+    }
+    /* Dark Mode */
+    body.dark-mode {
+      background: #121212;
+      color: #ddd;
+    }
+    body.dark-mode .navbar {
+      background: #1f1f1f;
+      box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+    }
+    body.dark-mode .navbar nav ul li a {
+      color: #ccc;
+    }
+    body.dark-mode .navbar nav ul li a.active,
+    body.dark-mode .navbar nav ul li a:hover {
+      background: #ff6f61;
+      color: #fff;
+    }
+    body.dark-mode .dark-toggle {
+      color: #ff6f61;
+    }
+    body.dark-mode main {
+      background: transparent;
+    }
+    body.dark-mode .breed-card {
+      background: #1e1e1e;
+      box-shadow: 0 6px 18px rgba(255,111,97,0.3);
+    }
+    body.dark-mode .breed-info h3 {
+      color: #ddd;
+    }
+    body.dark-mode .breed-info p {
+      color: #bbb;
+    }
+    body.dark-mode footer {
+      background: #1a1a1a;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">🐾 Puppy Paradise</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="breeds.html" class="active">Breeds</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="video.html" >Videos</a></li>
+        <li><a href="price.html">pricing</a></li>
+        <li><a href="adoption.html">Adoption</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="delivery.html">Delivery</a></li>
+      </ul>
+    </nav>
+    <button id="darkModeToggle" class="dark-toggle">🌙 Dark Mode</button>
+  </header>
+
+  <main>
+    <h1>Popular Breeds at Puppy Paradise</h1>
+    <div class="breed-grid">
+      <article class="breed-card">
+        <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=400&q=80" alt="Golden Retriever Puppy" />
+        <div class="breed-info">
+          <h3>Golden Retriever</h3>
+          <p>Friendly, intelligent, and devoted. Perfect for families looking for a loyal companion.</p>
+        </div>
+      </article>
+
+      <article class="breed-card">
+        <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80" alt="French Bulldog Puppy" />
+        <div class="breed-info">
+          <h3>French Bulldog</h3>
+          <p>Compact, playful, and affectionate. Great for city living and small spaces.</p>
+        </div>
+      </article>
+
+      <article class="breed-card">
+        <img src="https://images.unsplash.com/photo-1525253086316-d0c936c814f8?auto=format&fit=crop&w=400&q=80" alt="Siberian Husky Puppy" />
+        <div class="breed-info">
+          <h3>Siberian Husky</h3>
+          <p>Energetic and strong-willed, Huskies need active owners who love adventure.</p>
+        </div>
+      </article>
+
+      <article class="breed-card">
+        <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=400&q=80" alt="Beagle Puppy" />
+        <div class="breed-info">
+          <h3>Beagle</h3>
+          <p>Cheerful and curious, Beagles are great family dogs that love to explore.</p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Puppy Paradise. All rights reserved.
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('darkModeToggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-mode');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pricing - Puppy Paradise</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: #f9fbfd;
+      color: #2c3e50;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 0;
+    }
+    .navbar {
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ff6f61;
+      cursor: default;
+    }
+    .navbar nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 25px;
+    }
+    .navbar nav ul li a {
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: 600;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: color 0.3s ease;
+    }
+    .navbar nav ul li a:hover,
+    .navbar nav ul li a.active {
+      background: #ff6f61;
+      color: white;
+    }
+    .dark-toggle {
+      background: transparent;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: #ff6f61;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+    .dark-toggle:hover {
+      background: #ff6f61;
+      color: white;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 50px auto 70px;
+      padding: 0 20px;
+    }
+
+    h1 {
+      color: #ff6f61;
+      text-align: center;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    p.subtitle {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+      color: #3a5160;
+    }
+
+    .price-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .price-table th,
+    .price-table td {
+      padding: 18px 25px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+      font-size: 1.1rem;
+      color: #2c3e50;
+    }
+
+    .price-table th {
+      background-color: #ff6f61;
+      color: white;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .price-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .price-table tbody tr:hover {
+      background-color: #ffe6e1;
+      cursor: default;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 0.9rem;
+      color: #999;
+      background: #fafafa;
+      margin-top: 60px;
+    }
+
+    /* Dark Mode */
+    body.dark-mode {
+      background: #121212;
+      color: #ddd;
+    }
+    body.dark-mode .navbar {
+      background: #1f1f1f;
+      box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+    }
+    body.dark-mode .navbar nav ul li a {
+      color: #ccc;
+    }
+    body.dark-mode .navbar nav ul li a.active,
+    body.dark-mode .navbar nav ul li a:hover {
+      background: #ff6f61;
+      color: #fff;
+    }
+    body.dark-mode .dark-toggle {
+      color: #ff6f61;
+    }
+    body.dark-mode footer {
+      background: #1a1a1a;
+      color: #bbb;
+    }
+    body.dark-mode .price-table {
+      background: #222;
+      box-shadow: 0 8px 20px rgba(255,111,97,0.2);
+      color: #ddd;
+    }
+    body.dark-mode .price-table th {
+      background-color: #ff6f61;
+      color: #fff;
+    }
+    body.dark-mode .price-table tbody tr:hover {
+      background-color: #ff8a7a44;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">🐾 Puppy Paradise</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="breeds.html">Breeds</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="video.html">Videos</a></li>
+        <li><a href="price.html" class="active">Pricing</a></li>
+        <li><a href="adoption.html">Adoption</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="delivery.html">Delivery</a></li>
+      </ul>
+    </nav>
+    <button id="darkModeToggle" class="dark-toggle">🌙 Dark Mode</button>
+  </header>
+
+  <main>
+    <h1>Our Puppy Pricing</h1>
+    <p class="subtitle">Find the perfect puppy within your budget</p>
+
+    <table class="price-table" aria-label="Puppy pricing table">
+      <thead>
+        <tr>
+          <th>Breed</th>
+          <th>Starting Price</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Golden Retriever</td>
+          <td>$900</td>
+          <td>Healthy, vaccinated, includes starter kit</td>
+        </tr>
+        <tr>
+          <td>French Bulldog</td>
+          <td>$1,500</td>
+          <td>Rare breed, high demand</td>
+        </tr>
+        <tr>
+          <td>Beagle</td>
+          <td>$700</td>
+          <td>Great family dog</td>
+        </tr>
+        <tr>
+          <td>Pug</td>
+          <td>$800</td>
+          <td>Friendly and playful</td>
+        </tr>
+        <tr>
+          <td>Border Collie</td>
+          <td>$1,000</td>
+          <td>Highly intelligent, active</td>
+        </tr>
+        <tr>
+          <td>Mixed Breeds</td>
+          <td>$500</td>
+          <td>Variety of colors & sizes</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    &copy; 2025 Puppy Paradise. All rights reserved.
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('darkModeToggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+    });
+    window.addEventListener('DOMContentLoaded', () => {
+      if(localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-mode');
+      }
+    });
+  </script>
+</body>
+</html>
